@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="实验">
+		<Project filename="test01/test01.cbp" />
+		<Project filename="test/test.cbp" active="1" />
+		<Project filename="pre_work/pre_work.cbp" />
+		<Project filename="testc++/testc++.cbp" />
+		<Project filename="test01_01/test01_01.cbp" />
+		<Project filename="Lab03/Lab03.cbp" />
+		<Project filename="Lab02/Lab02.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

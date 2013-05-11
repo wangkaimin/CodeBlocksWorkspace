@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="SourceCodeForTeaching">
+		<Project filename="ch1/ch1.cbp" />
+		<Project filename="ch2_1/ch2_1.cbp" />
+		<Project filename="test/test.cbp" />
+		<Project filename="../testWorkspace/ch2_5/ch2_5.cbp" active="1" />
+	</Workspace>
+</CodeBlocks_workspace_file>
