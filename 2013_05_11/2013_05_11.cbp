@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="2013_05_11" />
+		<Option title="sizeof and strlen" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>

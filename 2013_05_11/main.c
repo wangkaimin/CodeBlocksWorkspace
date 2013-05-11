@@ -4,7 +4,7 @@ void testSizeof(int a[10])
 {
     printf("sizeof(a)=%d",sizeof(a));
 }
-//Ö÷º¯Êý
+
 int main()
 {
     int b[10];
