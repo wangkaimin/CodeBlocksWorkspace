@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 void testSizeofAndStrlen(int a[10])
 {
     int b[10];
-    int c[10]={0};
+    int c[10]= {0};
     // 整型数组作为参数 sizeof是指针类型的大小
     printf("sizeof(a)=%d\n",sizeof(a));
     // 一般的局部整型数组 sizeof是单个整型的整数倍
@@ -19,7 +20,7 @@ void testSizeofAndStrlen(int a[10])
 int main()
 {
     int b[10];
-    int c[10]={0};
+    int c[10]= {0};
     printf("#main begin#\n");
     printf("sizeof(b)=%d\n",sizeof(b));
     printf("strlen(b)=%d\n",strlen(b));
