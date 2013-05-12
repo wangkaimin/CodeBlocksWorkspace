@@ -16,16 +16,22 @@ void testSizeofAndStrlen(int a[10])
     // 初始化后正常
     printf("strlen(c)=%d\n",strlen(c));
 }
+void testSizeof()
+{
+    short testarray[4][3] = { {1}, {2, 3}, {4, 5, 6} };
+    printf("sizeof(testarray[4][3])=%d\n",sizeof(testarray));
+}
 // 中文注释 测试是否乱码？
 int main()
 {
     int b[10];
     int c[10]= {0};
-    printf("#main begin#\n");
-    printf("sizeof(b)=%d\n",sizeof(b));
-    printf("strlen(b)=%d\n",strlen(b));
-    printf("strlen(c)=%d\n",strlen(c));
-    printf("\n#testSizeofAndStrlen begin#\n");
-    testSizeofAndStrlen(b);
+//    printf("#main begin#\n");
+//    printf("sizeof(b)=%d\n",sizeof(b));
+//    printf("strlen(b)=%d\n",strlen(b));
+//    printf("strlen(c)=%d\n",strlen(c));
+//    printf("\n#testSizeofAndStrlen begin#\n");
+    //testSizeofAndStrlen(b);
+    testSizeof();
     return 0;
 }
