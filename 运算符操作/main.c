@@ -26,8 +26,8 @@ int test3()
 int test4()
 {
     int j,k;
-    j=2<<k="j"j="256;"k="14;"k="j">
-    j = 2 << k =" j" j =" 256;" k =" 14;" k =" j">
+    //j=2<<k="j"j="256;"k="14;"k="j">
+    //j = 2 << k =" j" j =" 256;" k =" 14;" k =" j">
     return k;
 }
 int main()
