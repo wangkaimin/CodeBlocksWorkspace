@@ -33,7 +33,7 @@ int test4()
 }
 int main()
 {
-    cout<<"k="<<test3()<<endl;
+    cout<<"k="<<test2()<<endl;
     return 0;
 }
 
