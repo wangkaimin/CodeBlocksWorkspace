@@ -5,7 +5,5 @@
 		<Project filename="指针与数组/指针与数组.cbp" />
 		<Project filename="函数指针与回调函数/函数指针与回调函数.cbp" />
 		<Project filename="sizeof/sizeof.cbp" />
-		<Project filename="++操作符/++操作符.cbp" />
-		<Project filename="C++运算符操作/C++运算符操作.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
