@@ -6,13 +6,13 @@ int test1()
 {
     int j=14;
     int k=1;
-    // k+=j+;// é€šä¸è¿‡ç¼–è¯‘
+    // k+=j+;// Í¨²»¹ı±àÒë
     return k;
 }
 int test2()
 {
     int k;
-    // éæ³•æ“ä½œ
+    // ·Ç·¨²Ù×÷
     **((int **) &k) = 16;
     return k;
 }
@@ -33,7 +33,7 @@ int test4()
 }
 int main()
 {
-    cout<<"k="<<test2()<<endl;
+    //cout<<"k="<<test()<<endl;
     return 0;
 }
 
