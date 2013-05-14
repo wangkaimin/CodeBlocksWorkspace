@@ -26,13 +26,11 @@ int main()
     p = a+1;
     printf("p=a+1 \t is 0x%08x\n",p);
     ++p;
-    // 此时p自加10个字节的长度
     printf("++p \t is 0x%08x\n",p);
 
     p=&a+1;
     printf("p \t is 0x%08x\n",p);
     ++p;
-    // 此时p自加10个字节的长度
     printf("++p \t is 0x%08x\n",p);
     return 0;
 }
