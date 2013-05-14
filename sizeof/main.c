@@ -7,10 +7,11 @@ typedef union
     int i; // 4
     long long ll; //8
 }test1;
+
 typedef struct {
-    int a[7]; //28
-    test1 test; //10
-    char c[7]; //7
+    int a[7]; //32
+    test1 test; // 16
+    char c[7]; // 7
 } test2;
 
 void sizeoftest()
