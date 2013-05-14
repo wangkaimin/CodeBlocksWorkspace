@@ -7,5 +7,6 @@
 		<Project filename="sizeof/sizeof.cbp" />
 		<Project filename="++操作符/++操作符.cbp" />
 		<Project filename="C++运算符操作/C++运算符操作.cbp" />
+		<Project filename="pointer/pointer.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
