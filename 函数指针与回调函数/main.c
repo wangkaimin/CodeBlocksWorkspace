@@ -15,7 +15,7 @@ int main()
     f = editfunc;
     (*f)();
 
-    repeat_three_times(say_hello,"kaimin");
+    //repeat_three_times(say_hello,"kaimin");
     return 0;
 }
  void filefunc()

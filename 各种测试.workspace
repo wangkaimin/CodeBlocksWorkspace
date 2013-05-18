@@ -8,5 +8,8 @@
 		<Project filename="++操作符/++操作符.cbp" />
 		<Project filename="C++运算符操作/C++运算符操作.cbp" />
 		<Project filename="pointer/pointer.cbp" />
+		<Project filename="位移和移位/位移和移位.cbp" />
+		<Project filename=" 进制表示/ 进制表示.cbp" />
+		<Project filename="内嵌汇编/内嵌汇编.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
