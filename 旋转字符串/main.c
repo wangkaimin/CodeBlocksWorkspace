@@ -34,7 +34,7 @@ char *RightShift02(char *str, int k)
 int main()
 {
     char str[] = "abcdefghijklmn";
-    fun RightShift = RightShift02;
+    fun RightShift = RightShift03;
     printf("%s\tsizeof=%d\tk=%d\n", str, sizeof(str), strlen(str));
     (*RightShift)(str,100);
     printf("%s\n", str);
