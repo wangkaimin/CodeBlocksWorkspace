@@ -53,7 +53,6 @@ char *Reverse(char *str, int begin, int end)
     }
     return str;
 }
-
 char * RightShift03(char *str, int k)
 {
     int i, len = strlen(str);
@@ -64,6 +63,7 @@ char * RightShift03(char *str, int k)
     Reverse(str, 0, len - 1 );
     return str;
 }
+
 int main()
 {
     char str[] = "abcdefghijklmnopqrstuvwxyz";
