@@ -64,10 +64,46 @@ char * RightShift03(char *str, int k)
     return str;
 }
 
+//④ 所有序号为 (j+i *m) % n (j 表示每个循环链起始位置，i 为计数变量，m表示左旋转位数，n表示字符串长度)
+//会构成一个循环链（共有gcd(n,m)个，gcd为n、m的最大公约数）
+//每个循环链上的元素只要移动一个位置即可，最后整个过程总共交换了n次
+//（每一次循环链，是交换n/gcd(n,m)次，共有gcd(n,m)个循环链，所以，总共交换n次）
+int gcd(int a, int b)
+{
+    int r=a%b;
+    while(r)
+    {
+        a=b;
+        b=r;
+        r=a%b;
+    }
+    return b;
+}
+char *RightShift04(char *str, int k)
+{
+    int n=strlen(str);
+    int i,j;
+    char c;
+    int num_of_group;
+    int elem_i_sub;
+    k%=n;
+    num_of_group = gcd(n, k);
+    elem_i_sub = n / num_of_group;
+    for(j=0;j<num_of_group;j++)
+    {
+        //c = str[j%n];
+        c = str[(j+(elem_i_sub-1)*k)%n];
+        for(i=elem_i_sub-1;i>0;i--)
+            str[(j+i*k)%n]=str[(j+(i-1)*k)%n];
+        str[(j+i*k)%n] = c;
+    }
+    return str;
+}
+
 int main()
 {
     char str[] = "abcdefghijklmnopqrstuvwxyz";
-    fun RightShift = RightShift03;
+    fun RightShift = RightShift04;
     printf("%s\tsizeof=%d\tk=%d\n", str, sizeof(str), strlen(str));
     (*RightShift)(str,100);
     printf("%s\n", str);
