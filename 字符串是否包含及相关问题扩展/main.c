@@ -27,7 +27,7 @@ int cmp_str02(const char *lstr, const char *sstr)
 {
     unsigned short int hash[MAXHASH];
     memset(hash, 0, MAXHASH*sizeof(unsigned short int));
-    while((*lstr) != '\0')
+    while(*lstr != '\0')
     {
         hash[(*lstr++)] = 1;
     }
