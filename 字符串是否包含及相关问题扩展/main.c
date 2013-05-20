@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define MAXHASH 256
 typedef int (* cmpstr)(const char *lstr, const char *sstr);
 // 最笨的方法 时间复杂度O(n^2)
-int compare_string01(char *longstring, char * shortstring)
+int cmp_str01(char *longstring, char * shortstring)
 {
     int len1 = strlen(longstring);
     int len2 = strlen(shortstring);
@@ -21,13 +22,29 @@ int compare_string01(char *longstring, char * shortstring)
     return 0;
 }
 
+// 哈希、位图
+int cmp_str02(const char *lstr, const char *sstr)
+{
+    unsigned short int hash[MAXHASH];
+    memset(hash, 0, MAXHASH*sizeof(unsigned short int));
+    while((*lstr) != '\0')
+    {
+        hash[(*lstr++)] = 1;
+    }
+    while((*sstr) != '\0')
+    {
+        if(hash[(unsigned short int)(*sstr++)] != 1)
+            return 1; // 不匹配
+    }
+    return 0;
+}
 
 int main()
 {
-    char lstr[] = "wangkaimin.";
-    char sstr[] = "kaimin.,";
-    cmpstr compare_string = compare_string01;
-    if((*compare_string)(lstr,sstr) == 0)
+    char lstr[] = "wangkaimin.)&(^@*%&^$)(&$(#&(@";
+    char sstr[] = "kaimin.(&&*";
+    cmpstr cmp_str = cmp_str02;
+    if((*cmp_str)(lstr,sstr) == 0)
         printf("Yes.\n");
     else
         printf("No.\n");
