@@ -2,5 +2,6 @@
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
 		<Project filename="旋转字符串/旋转字符串.cbp" />
+		<Project filename="字符串是否包含及相关问题扩展/字符串是否包含及相关问题扩展.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
