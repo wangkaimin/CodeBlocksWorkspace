@@ -4,5 +4,7 @@
 		<Project filename="旋转字符串/旋转字符串.cbp" />
 		<Project filename="字符串是否包含及相关问题扩展/字符串是否包含及相关问题扩展.cbp" />
 		<Project filename="字符串转整型/字符串转整型.cbp" />
+		<Project filename="字符串拷贝/字符串拷贝.cbp" />
+		<Project filename="寻找最小的k个数/寻找最小的k个数.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
