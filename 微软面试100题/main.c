@@ -3,8 +3,12 @@
 
 #include "tree.h"
 
+/* 003 */
+extern int findMaxSubSum(int arr[], int start, int end);
+
 extern BinaryTree *initTree(int arr[], int len);
 extern void printPaths(BinaryTree *root, int sum);
+
 
 void test004()
 {
