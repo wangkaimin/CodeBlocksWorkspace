@@ -13,7 +13,6 @@ void test004()
     int len = 6;
     ElementType arr[TREE_NODES] = {7,5,11,4,6,2};
     root = initTree(arr, len);
-    printf("Hello world!\n");
     printPaths(root, sum);
 }
 

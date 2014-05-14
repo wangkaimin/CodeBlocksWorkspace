@@ -31,9 +31,19 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="003.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="004.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="tree.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tree.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
