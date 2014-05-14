@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="2.58_判断系统大小端" />
+		<Option title="2.58_判断大小端" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
