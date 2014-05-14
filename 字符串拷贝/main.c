@@ -20,7 +20,7 @@ char * strcpy01(char *dest, const char * src)
 int main()
 {
     char str[] = "wangkaimin";
-    char *p = NULL;
+    char *p = "minkaiwang";
     p = strcpy01(str,p);
     //p = strcpy01(str,p);
     printf("str=%s\t%s\n",str,p);
