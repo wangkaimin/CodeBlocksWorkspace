@@ -9,6 +9,11 @@ extern int findMaxSubSum(int arr[], int start, int end);
 extern BinaryTree *initTree(int arr[], int len);
 extern void printPaths(BinaryTree *root, int sum);
 
+void test003()
+{
+    int arr[6] = {-4,-6,-5,-2,-1,-3};
+    printf("max=%d\n",findMaxSubSum(arr, 0, 6));
+}
 
 void test004()
 {
@@ -22,6 +27,6 @@ void test004()
 
 int main()
 {
-    test004();
+    test003();
     return 0;
 }
