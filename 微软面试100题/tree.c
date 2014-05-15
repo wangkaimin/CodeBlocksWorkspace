@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <stdio.h>
 
-BinaryTree *buildTree(BinaryTree *root, ElementType e)
+static BinaryTree *buildTree(BinaryTree *root, ElementType e)
 {
     BinaryTree *temp = root;
     BinaryTree *newNode;

@@ -31,6 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="001.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="002.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="003.c">
 			<Option compilerVar="CC" />
 		</Unit>

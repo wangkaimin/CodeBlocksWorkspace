@@ -7,7 +7,7 @@
 #include "tree.h"
 #include <stdio.h>
 
-void printPath(int path[], int top)
+static void printPath(int path[], int top)
 {
     int i=0;
     for(i=0;i<top-1;i++)
@@ -15,7 +15,7 @@ void printPath(int path[], int top)
     printf("%d\n", path[i]);
 }
 
-void helper(BinaryTree *root, int sum, int path[], int top)
+static void helper(BinaryTree *root, int sum, int path[], int top)
 {
     path[top] = root->e;
     sum -= path[top];
