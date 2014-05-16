@@ -14,4 +14,7 @@ typedef struct tagBinaryTree
     struct tagBinaryTree *pRight;
 } BinaryTree;
 
+BinaryTree *initTree(ElementType arr[], int len);
+BinaryTree *BinaryTreeToDoubleList(BinaryTree *root);
+
 #endif // TREE_H_INCLUDED

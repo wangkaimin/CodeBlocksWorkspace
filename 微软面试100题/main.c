@@ -2,13 +2,17 @@
 #include <stdlib.h>
 
 #include "tree.h"
+#include "stack.h"
 
 /* 001 */
-extern BinaryTree *BinaryTreeToDoubleList(BinaryTree *root);
+//extern BinaryTree *BinaryTreeToDoubleList(BinaryTree *root);
+/* 002 */
+
 /* 003 */
 extern int findMaxSubSum(int arr[], int start, int end);
 
-extern BinaryTree *initTree(int arr[], int len);
+/* 004 */
+//extern BinaryTree *initTree(int arr[], int len);
 extern void printPaths(BinaryTree *root, int sum);
 
 static BinaryTree *myInitTree()
@@ -22,7 +26,7 @@ static BinaryTree *myInitTree()
 
 void test001()
 {
-    BinaryTree *root;
+    BinaryTree *root, *temp;
     root = BinaryTreeToDoubleList(myInitTree());
     temp = root;
     while(temp != NULL)
@@ -31,6 +35,23 @@ void test001()
         temp = temp->pRight;
     }
 }
+
+void test002()
+{
+    MinStack *ms = NULL;
+    int max = 50;
+    int val = 0, i = 0;
+    int arr[] = {2, 9, 1, 5, 4, -1};
+    if(1 == init(&ms, max))
+        return;
+    for(i=0;i<6;i++)
+    {
+        push(ms, arr[i]);
+        min(ms, &val);
+        printf("min=%d\n", val);
+    }
+}
+
 
 void test003()
 {
@@ -46,6 +67,6 @@ void test004()
 
 int main()
 {
-    test001();
+    test002();
     return 0;
 }

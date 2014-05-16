@@ -1,6 +1,7 @@
 #include "tree.h"
 #include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 static BinaryTree *buildTree(BinaryTree *root, ElementType e)
 {
