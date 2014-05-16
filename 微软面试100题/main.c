@@ -65,8 +65,31 @@ void test004()
     printPaths(myInitTree(), sum);
 }
 
+void test005()
+{
+    int arr[] = {2, 9, 1, 5, 4, 3};
+    int i = 0;
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
+    siftdown(arr, 1, 6);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
+    siftup(arr , 2, 5);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
+}
+
 int main()
 {
-    test002();
+    test005();
     return 0;
 }
