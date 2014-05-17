@@ -80,7 +80,7 @@ void test005()
         printf("%d ", arr[i]);
     }
     printf("%d\n", arr[i]);
-    siftup(arr , 2, 5);
+    siftup(arr , 2, 6);
     for(i=0;i<5;i++)
     {
         printf("%d ", arr[i]);
