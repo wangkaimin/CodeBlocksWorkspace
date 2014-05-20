@@ -73,6 +73,7 @@ void test005()
     {
         printf("%d ", arr[i]);
     }
+    printf("%d\n", arr[i]);
     quickSort(arr, 6);
     for(i=0;i<5;i++)
     {

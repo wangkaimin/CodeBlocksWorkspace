@@ -1,20 +1,34 @@
 static void helper(int arr[], int start, int end)
 {
     int now = arr[start];
+    int temp_start= start;
+    int temp_end = end;
+    // 0 1 2 3 4 5
+    // 2 9 1 5 4 3
+    // 1 9 1 5 4 3
+    // 1 2 9 5 4 3
+    if(start >= end)
+        return ;
     while(start != end)
     {
-        if(arr[end--] < now)
-            arr[start++] = now;
+        while(arr[end] > now && end>start)
+            end--;
+        arr[start] = arr[end];
+        if(start == end)
+            break;
         else
-            continue;
-        if(arr[start] > now)
-            arr[end] = now;
+            start++;
+        while(arr[start] < now && start<end)
+            start++;
+        arr[end] = arr[start];
+        if(end == start)
+            break;
         else
-            continue;
+            end--;
     }
     arr[start] = now;
-    helper(arr, 0, start-1);
-    helper(arr, start+1, end);
+    helper(arr, temp_start, start-1);
+    helper(arr, start+1, temp_end);
 }
 
 int *quickSort(int arr[], int len)
