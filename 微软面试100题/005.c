@@ -1,3 +1,16 @@
+static helper(int arr, int len, int start, int end)
+{
+    helper()
+}
+
+int *quickSort(int arr[], int len)
+{
+    int start = 0, end = 0;
+    helper(arr, len, start, end);
+    return arr;
+}
+
+
 /* 005 */
 void swap(int a[], int i, int p)
 {
