@@ -34,7 +34,6 @@ static void helper(int arr[], int start, int end)
 int *quickSort(int arr[], int len)
 {
     int start = 0, end = len-1;
-
     helper(arr, start, end);
     return arr;
 }
