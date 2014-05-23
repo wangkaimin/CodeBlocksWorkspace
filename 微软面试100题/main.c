@@ -14,7 +14,8 @@ extern int findMaxSubSum(int arr[], int start, int end);
 /* 004 */
 //extern BinaryTree *initTree(int arr[], int len);
 extern void printPaths(BinaryTree *root, int sum);
-
+/* 005.1 */
+extern void quickSort01(int arr[], int start, int end);
 static BinaryTree *myInitTree()
 {
     BinaryTree *root;
@@ -74,6 +75,12 @@ void test005()
         printf("%d ", arr[i]);
     }
     printf("%d\n", arr[i]);
+    quickSort(arr, 6);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
     siftdown(arr, 1, 6);
     for(i=0;i<5;i++)
     {
@@ -87,9 +94,24 @@ void test005()
     }
     printf("%d\n", arr[i]);
 }
-
+void test005_01()
+{
+    int arr[] = {2, 9, 1, 5, 4, 3};
+    int i = 0;
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
+    quickSort01(arr, 0, 5);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("%d\n", arr[i]);
+}
 int main()
 {
-    test005();
+    test005_01();
     return 0;
 }

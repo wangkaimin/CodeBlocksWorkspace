@@ -46,6 +46,9 @@
 		<Unit filename="005.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="006.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
