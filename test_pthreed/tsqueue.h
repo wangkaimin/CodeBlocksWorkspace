@@ -36,6 +36,8 @@ extern "C" {
 #endif
 
 #include <pthread.h>
+#include <signal.h>
+
 
 typedef struct ts_queue_item TSQItem;
 
