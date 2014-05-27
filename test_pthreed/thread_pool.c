@@ -15,17 +15,17 @@
 
 #include "thread_pool.h"
 
-//#define __DEBUG__
+#define __DEBUG__
 
 #ifdef __DEBUG__
 #define DEBUG(format,...)	printf(format,##__VA_ARGS__)
 #else
-#define DEBUG(format,...) 
+#define DEBUG(format,...)
 #endif
 
 static TpThreadInfo *tp_add_thread(TpThreadPool *pTp, process_job proc_fun, void *job);
-static int tp_delete_thread(TpThreadPool *pTp); 
-static int tp_get_tp_status(TpThreadPool *pTp); 
+static int tp_delete_thread(TpThreadPool *pTp);
+static int tp_get_tp_status(TpThreadPool *pTp);
 
 static void *tp_work_thread(void *pthread);
 static void *tp_manage_thread(void *pthread);
@@ -105,7 +105,7 @@ int tp_init(TpThreadPool *pTp) {
 		fprintf(stderr, "tp_init: creat manage thread failed\n");
 		return 0;
 	}
-	
+
 	//wait for all threads are ready
 	while(i++ < pTp->cur_th_num){
 		pthread_mutex_lock(&pTp->tp_lock);
@@ -218,7 +218,7 @@ int tp_process_job(TpThreadPool *pTp, process_job proc_fun, void *arg) {
 		//pthread_mutex_lock(&pTp->tp_lock);
 		//pthread_cond_wait(&pTp->tp_cond, &pTp->tp_lock);
 		//pthread_mutex_unlock(&pTp->tp_lock);
-		
+
 		DEBUG("No more idle thread, a new thread is created.\n");
 	}
 	return 0;
@@ -244,7 +244,7 @@ static TpThreadInfo *tp_add_thread(TpThreadPool *pTp, process_job proc_fun, void
 	}
 
 	//malloc new thread info struct
-	new_thread = pTp->thread_info + pTp->cur_th_num; 
+	new_thread = pTp->thread_info + pTp->cur_th_num;
 	pTp->cur_th_num++;
 	pthread_mutex_unlock(&pTp->tp_lock);
 
@@ -287,7 +287,7 @@ int tp_delete_thread(TpThreadPool *pTp) {
 	pThi = (TpThreadInfo *) ts_queue_deq_data(pTp->idle_q);
 	if(!pThi)
 		return -1;
-	
+
 	//after deleting idle thread, current thread num -1
 	pthread_mutex_lock(&pTp->tp_lock);
 	pTp->cur_th_num--;
@@ -329,7 +329,7 @@ static void *tp_work_thread(void *arg) {
 			//I am idle now
 			ts_queue_enq_data(pTp->idle_q, pTinfo);
 		}
-			
+
 		//wait cond for processing real job.
 		DEBUG("thread %u is waiting for a job\n", pTinfo->thread_id);
 		pthread_mutex_lock(&pTinfo->thread_lock);
@@ -363,7 +363,7 @@ int tp_get_tp_status(TpThreadPool *pTp) {
 	if(busy_num / (pTp->cur_th_num) < pTp->busy_threshold)
 		return 0;//idle status
 	else
-		return 1;//busy or normal status	
+		return 1;//busy or normal status
 }
 
 /**
