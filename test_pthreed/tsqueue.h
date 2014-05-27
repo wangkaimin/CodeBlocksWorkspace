@@ -50,10 +50,8 @@ struct ts_queue{
 	TSQItem *head;
 	TSQItem *tail;
 	pthread_mutex_t lock;
-
 	TSQItem *cqi_freelist;
 	pthread_mutex_t cqi_freelist_lock;
-
 	unsigned count;
 };
 
