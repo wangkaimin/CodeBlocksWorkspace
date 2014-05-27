@@ -16,9 +16,9 @@ void proc_fun(void *arg){
 	int i;
 	int idx=(int) arg;
 	i = 1000000.0 + (int)(9000000.0 * rand() / RAND_MAX);
-	fprintf(stdout, "Begin: job %d, sleep %d us\n", idx, i);
+	fprintf(stdout, "Begin: job %d, sleep %d us\r\n", idx, i);
 	usleep(i);
-	fprintf(stdout, "End:   job %d\n", idx);
+	fprintf(stdout, "End:   job %d\r\n", idx);
 	pthread_mutex_lock(&lock);
 	exit_cnt++;
 	pthread_mutex_unlock(&lock);
@@ -39,7 +39,7 @@ int main(int argc, char **argv){
 	}
 	tp_run(pTp);
 	free(pTp);
-	fprintf(stdout, "All jobs done!\n");
+	fprintf(stdout, "All jobs done!\r\n");
 	return 0;
 }
 
