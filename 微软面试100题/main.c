@@ -19,8 +19,8 @@ extern void quickSort01(int arr[], int start, int end);
 static BinaryTree *myInitTree()
 {
     BinaryTree *root;
-    ElementType arr[TREE_NODES] = {7,5,11,4,6,2};
-    int len = 6;
+    ElementType arr[TREE_NODES] = {7,5,11,4,6,2,12,13};
+    int len = 8;
     root = initTree(arr, len);
     return root;
 }
@@ -103,7 +103,7 @@ void test005_01()
         printf("%d ", arr[i]);
     }
     printf("%d\n", arr[i]);
-    quickSort01(arr, 0, 5);
+    //quickSort01(arr, 0, 5);
     for(i=0;i<5;i++)
     {
         printf("%d ", arr[i]);
@@ -112,6 +112,6 @@ void test005_01()
 }
 int main()
 {
-    test005_01();
+    test001();
     return 0;
 }

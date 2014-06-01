@@ -31,9 +31,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="thread_pool.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="thread_pool.h" />
+		<Unit filename="tp_test.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tsqueue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tsqueue.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

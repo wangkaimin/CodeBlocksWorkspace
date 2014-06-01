@@ -9,7 +9,7 @@
 		<Project filename="C++运算符操作/C++运算符操作.cbp" />
 		<Project filename="pointer/pointer.cbp" />
 		<Project filename="位移和移位/位移和移位.cbp" />
-		<Project filename=" 进制表示/ 进制表示.cbp" />
 		<Project filename="内嵌汇编/内嵌汇编.cbp" />
+		<Project filename="test_pthreed/test_pthreed.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
