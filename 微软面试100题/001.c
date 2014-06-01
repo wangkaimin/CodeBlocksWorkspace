@@ -32,8 +32,8 @@ static void helper02(BinaryTree **rightHead, BinaryTree **leftTail, BinaryTree *
     else
         *leftTail = leftHead = root;
 
-    if(*rightHead != *leftTail)
-    {
+    //if(*rightHead != *leftTail)
+    //{
         if(rightTail != root)
         {
             rightTail->pRight = root;
@@ -44,7 +44,7 @@ static void helper02(BinaryTree **rightHead, BinaryTree **leftTail, BinaryTree *
             leftHead->pLeft = root;
             root->pRight = leftHead;
         }
-    }
+    //}
 }
 static void helper01(BinaryTree **rightHead, BinaryTree **leftTail, BinaryTree *root)
 {
